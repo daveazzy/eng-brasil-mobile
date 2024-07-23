@@ -15,6 +15,8 @@ import {
 import logo_engbrasil from "../../assets/logo_engbrasil.png";
 import { Button } from "../../components/btn/btn";
 import { Input } from "../../components/inputs/inputs";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { KeyboardAvoidingView, Platform } from "react-native";
 
 export function Home() {
   return (
@@ -25,7 +27,17 @@ export function Home() {
       style="dark" 
       />
 
-      <Scroll contentContainerStyle={{flexGrow: 1}}>
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}
+      >
+
+      <KeyboardAwareScrollView 
+      contentContainerStyle={{flexGrow: 1}}
+      enableOnAndroid={true}
+      extraScrollHeight={150}
+      >
 
         <Container_img>
           <Logo_eng_brasil
@@ -69,7 +81,8 @@ export function Home() {
           </ButtonBox>
         </Forms>
 
-      </Scroll>
+      </KeyboardAwareScrollView>
+      </KeyboardAvoidingView>
       
     </Container>
   );

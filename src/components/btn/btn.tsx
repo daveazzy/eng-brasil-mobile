@@ -11,7 +11,7 @@ export function Button ({title, type = 'PRIMARY', ...rest} : Props){
         <Container
         type={type}
         {...rest}>
-            <Title>
+            <Title type={type}>
                 {title}
             </Title>
         </Container>

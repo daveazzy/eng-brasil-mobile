@@ -22,8 +22,10 @@ export const Container = styled(TouchableOpacity)<Props>`
     align-items: center;
 `;
 
-export const Title = styled.Text`
-    color: ${({ theme }) => theme.COLORS.WHITE}
+export const Title = styled.Text<Props>`
+    color: ${({ theme, type }) => type === 'PRIMARY' ? theme.COLORS.WHITE : theme.COLORS.BLUE};
+    font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+    font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
     /* Mensagem para o MJ: estilize a fonte. lembre-se de instalar a fonte que ce quer
     pesquise "como instalar fonte usando expo google fonts" */
     

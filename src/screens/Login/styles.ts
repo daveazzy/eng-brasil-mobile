@@ -1,5 +1,6 @@
 import styled from "styled-components/native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { ImageBackground } from "react-native";
 
 export const Container = styled(SafeAreaView)`
     background-color: ${({theme}) => theme.COLORS.WHITE};
@@ -44,4 +45,9 @@ export const ButtonBox = styled.View`
 `
 export const Scroll = styled.ScrollView`
     flex-grow: 1;
+`
+export const BackgroundImg = styled(ImageBackground)`
+    flex-grow: 1;
+    justify-content: center;
+    opacity: 0.8;
 `
