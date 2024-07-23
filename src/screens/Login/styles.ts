@@ -5,9 +5,6 @@ export const Container = styled(SafeAreaView)`
     background-color: ${({theme}) => theme.COLORS.WHITE};
     flex: 1;
 `;
-export const Scroll = styled.ScrollView`
-background-color: grey;
-`
 
 export const Container_img = styled.View`
     align-items: center;
@@ -15,29 +12,30 @@ export const Container_img = styled.View`
     padding-top: 51px;
     padding-bottom: 72px;
 `;
-export const InputTitle = styled.Text`
-    margin: 0 16px 5px 16px;
-`
-
-export const Container_forms = styled.View `
-    flex: 1;
-    align-content: space-between;
-    background-color: red;
-`;
-export const Container_Input = styled.View`
-`
-export const Container_Btn = styled.View`
-`
 
 export const Logo_eng_brasil = styled.Image`
-    width: 244px;
+    width: 300px;
     height: 244px;
-    background-color: red;
 `
-export const PassContainer = styled.TouchableOpacity`
-    flex-direction: row;
+export const Input_Title = styled.Text`
+    margin-bottom: 12px;
+`
+export const PassRecoveryBox = styled.View`
     justify-content: flex-end;
-    padding: 0 16px;
+    flex-direction: row;
 `
-export const PassRecover = styled.Text`
+export const PassRecoveryText = styled.Text`
+
+`
+export const Forms = styled.View`
+    flex: 1;
+    padding: 0 16px;
+    justify-content: space-between;    
+`
+export const InputBox = styled.View`
+`
+export const ButtonBox = styled.View`
+`
+export const Scroll = styled.ScrollView`
+    flex-grow: 1;
 `

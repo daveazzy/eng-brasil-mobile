@@ -4,17 +4,18 @@ import {
   Container,
   Logo_eng_brasil,
   Container_img,
-  Container_forms,
+  Input_Title,
+  Forms,
+  PassRecoveryBox,
+  PassRecoveryText,
+  InputBox,
+  ButtonBox,
   Scroll,
-  InputTitle,
-  Container_Input,
-  Container_Btn,
-  PassRecover,
-  PassContainer,
 } from "./styles";
 import logo_engbrasil from "../../assets/logo_engbrasil.png";
-import { Input } from "../../components/inputs/inputs";
 import { Button } from "../../components/btn/btn";
+import { Input } from "../../components/inputs/inputs";
+import { View } from "react-native";
 
 export function Home() {
   return (
@@ -25,30 +26,51 @@ export function Home() {
       style="dark" 
       />
 
-      <Container_img>
-        <Logo_eng_brasil
-          source={logo_engbrasil}
-          resizeMode="contain"
-        /> 
+      <Scroll contentContainerStyle={{flexGrow: 1}}>
 
-      </Container_img>
-      
-      <Container_forms>
-        <Container_Input>
-        <InputTitle>Email</InputTitle>
-        <Input/>
-        <InputTitle>Senha</InputTitle>
-        <Input/>
-        <PassContainer>
-        <PassRecover>Recuperar senha</PassRecover>
-        </PassContainer>
-        </Container_Input>
+        <Container_img>
+          <Logo_eng_brasil
+            source={logo_engbrasil}
+            resizeMode="contain"
+          /> 
+        </Container_img>
+        
+        <Forms>
+          <InputBox>
+            <Input_Title>Email</Input_Title>
+            <Input
+            placeholder="example@example.com"
+            autoCapitalize="none"
+            style={{ marginBottom: 24}}
+            />
 
-        <Container_Btn>
-          <Button/>
-          <Button/>
-        </Container_Btn>
-      </Container_forms>
+            <Input_Title>Senha</Input_Title>
+            <Input
+            placeholder="********"
+            secureTextEntry
+            autoCapitalize="none"
+            style={{ marginBottom: 24}}
+            />
+
+            <PassRecoveryBox>
+              <PassRecoveryText>Recuperação de senha</PassRecoveryText>
+            </PassRecoveryBox>
+          </InputBox>
+
+          <ButtonBox>
+            <Button
+            title="Entrar"
+            style={{ marginBottom: 24}}
+            />
+            <Button
+            title="Cadastrar-se"
+            type='SECONDARY'
+            style={{ marginBottom: 24}}
+            />
+          </ButtonBox>
+        </Forms>
+
+      </Scroll>
       
     </Container>
   );

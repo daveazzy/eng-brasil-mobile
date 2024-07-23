@@ -1,10 +1,11 @@
-import styled from "styled-components";
-import { Container_inputs, Input_btn } from "./styles";
+import { TextInputProps } from "react-native";
 
-export const Input =() =>{
+import { Container } from "./styles";
+
+export function Input({...rest}: TextInputProps){
     return(
-        <Container_inputs>
-            <Input_btn/>
-        </Container_inputs>
+        <Container
+        {...rest}
+        />
     )
 }
