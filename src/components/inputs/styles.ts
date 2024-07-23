@@ -1,27 +1,15 @@
 import styled from "styled-components/native";
+
 export const Container_inputs = styled.View`
-    margin-bottom:143px;
-    gap:49px;
+    padding: 0 16px;
 `;
 
 export const Input_btn = styled.TextInput`
     width: 100%;
     height: 52px;
+    justify-content: center;
+    padding: 0 16px;
     border-width: 1px;
     background-color: white;
-    ::placeholder {
-        
-    }
+    margin-bottom: 24px;
 `;
-
-const StyleTextInput = styled.TextInput`
-
-`
-
-// export const Input_btn_text = styled.TextInput`
-
-
-//     ::placeholder {
-//         color: black;
-//     }
-// `;

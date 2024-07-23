@@ -5,35 +5,50 @@ import {
   Logo_eng_brasil,
   Container_img,
   Container_forms,
+  Scroll,
+  InputTitle,
+  Container_Input,
+  Container_Btn,
+  PassRecover,
+  PassContainer,
 } from "./styles";
 import logo_engbrasil from "../../assets/logo_engbrasil.png";
 import { Input } from "../../components/inputs/inputs";
 import { Button } from "../../components/btn/btn";
-import { Container_inputs } from "../../components/inputs/styles";
-import { Container_Buttons } from "../../components/btn/styles";
 
 export function Home() {
   return (
     <Container>
-      <StatusBar backgroundColor="transparent" translucent style="light" />
+      <StatusBar 
+      backgroundColor="transparent" 
+      translucent 
+      style="dark" 
+      />
 
       <Container_img>
         <Logo_eng_brasil
           source={logo_engbrasil}
           resizeMode="contain"
-        ></Logo_eng_brasil>
-      </Container_img>
+        /> 
 
-     
-        <Container_inputs>
-            <Input />
-            <Input />
-        </Container_inputs>
-        
-        <Container_Buttons>
-            <Button />
-            <Button />
-        </Container_Buttons>
+      </Container_img>
+      
+      <Container_forms>
+        <Container_Input>
+        <InputTitle>Email</InputTitle>
+        <Input/>
+        <InputTitle>Senha</InputTitle>
+        <Input/>
+        <PassContainer>
+        <PassRecover>Recuperar senha</PassRecover>
+        </PassContainer>
+        </Container_Input>
+
+        <Container_Btn>
+          <Button/>
+          <Button/>
+        </Container_Btn>
+      </Container_forms>
       
     </Container>
   );
