@@ -15,7 +15,6 @@ import {
 import logo_engbrasil from "../../assets/logo_engbrasil.png";
 import { Button } from "../../components/btn/btn";
 import { Input } from "../../components/inputs/inputs";
-import { View } from "react-native";
 
 export function Home() {
   return (

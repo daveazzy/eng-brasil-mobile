@@ -10,7 +10,7 @@ export const Container_img = styled.View`
     align-items: center;
     justify-content: center;
     padding-top: 51px;
-    padding-bottom: 72px;
+    padding-bottom: 48px;
 `;
 
 export const Logo_eng_brasil = styled.Image`
@@ -19,18 +19,24 @@ export const Logo_eng_brasil = styled.Image`
 `
 export const Input_Title = styled.Text`
     margin-bottom: 12px;
+    color: black;
+    font-family: ${({ theme }) => theme.FONT_FAMILY.MEDIUM};
+    font-size: ${({ theme }) => theme.FONT_SIZE.LG}px;
 `
 export const PassRecoveryBox = styled.View`
     justify-content: flex-end;
     flex-direction: row;
 `
 export const PassRecoveryText = styled.Text`
-
+    color: ${({ theme })=> theme.COLORS.BLUE};
+    font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+    font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
 `
 export const Forms = styled.View`
     flex: 1;
     padding: 0 16px;
-    justify-content: space-between;    
+    justify-content: space-between;
+    padding-bottom: 8px ;
 `
 export const InputBox = styled.View`
 `
