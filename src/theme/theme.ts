@@ -2,12 +2,13 @@ export default {
     COLORS: {
         WHITE: '#FFFFFF',
 
-        BLUE: "#1B388D", 
-        BLUE_INACTIVE: '#D7E5FA',
+        BLUE: "#0961C9", 
+        BLUE_INACTIVE: '#CBEBFC',
 
         GREY_INACTIVE: '#F0F2FA', 
         GREY_ACTIVE: '#B0B2BF',
-        GREY_BORDER: '#E0EAF2' 
+        GREY_BORDER: '#E0EAF2',
+        GREY_INFO: '#3D3E44'
 
     },
     FONT_FAMILY: {
@@ -20,6 +21,6 @@ export default {
         SM: 14,
         MD: 16,
         LG: 18,
-        XL: 24
+        XL: 22
       }
 }

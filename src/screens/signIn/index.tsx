@@ -18,7 +18,7 @@ import { Input } from "../../components/inputs/inputs";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { KeyboardAvoidingView, Platform } from "react-native";
 
-export function Home() {
+export function SigIn() {
   return (
     <Container>
       <StatusBar 
@@ -64,14 +64,14 @@ export function Home() {
             />
 
             <PassRecoveryBox>
-              <PassRecoveryText>Recuperação de senha</PassRecoveryText>
+              <PassRecoveryText>Recuperar de senha</PassRecoveryText>
             </PassRecoveryBox>
           </InputBox>
 
           <ButtonBox>
             <Button
             title="Entrar"
-            style={{ marginBottom: 24}}
+            style={{ marginBottom: 16}}
             />
             <Button
             title="Cadastrar-se"

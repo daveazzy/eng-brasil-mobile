@@ -10,13 +10,13 @@ export const Container = styled(SafeAreaView)`
 export const Container_img = styled.View`
     align-items: center;
     justify-content: center;
-    padding-top: 51px;
-    padding-bottom: 48px;
+    padding-top: 108px;
+    padding-bottom: 96px;
 `;
 
 export const Logo_eng_brasil = styled.Image`
     width: 300px;
-    height: 244px;
+    height: 100px;
 `
 export const Input_Title = styled.Text`
     margin-bottom: 12px;
