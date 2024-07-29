@@ -9,6 +9,7 @@ import { Register } from './src/screens/register';
 import { PassRecovery } from './src/screens/passRecovery';
 import { PassRecoveryToken } from './src/screens/passRecovery/indexToken';
 import { PassChange } from './src/screens/passRecovery/PassChange';
+import { Routes } from './src/screens/routes';
 
 export default function App() {
 
@@ -16,7 +17,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {fontsLoaded ? <PassChange/> : <ActivityIndicator/>}
+      {fontsLoaded ? <Routes/> : <ActivityIndicator/>}
     </ThemeProvider>
   );
 }
