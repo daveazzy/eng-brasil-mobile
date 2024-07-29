@@ -9,7 +9,8 @@ export default {
         GREY_ACTIVE: '#B0B2BF',
         GREY_BORDER: '#E0EAF2',
         GREY_INFO: '#3D3E44',
-        GREY_TB: '#5A5C66'
+        GREY_TB: '#5A5C66', 
+        GREY_10: '#DDDFEB'
 
     },
     FONT_FAMILY: {
@@ -22,6 +23,7 @@ export default {
         SM: 14,
         MD: 16,
         LG: 18,
-        XL: 22
+        XL: 22,
+        XXL: 24
       }
 }
