@@ -7,6 +7,8 @@ import { StyleProp, ViewStyle } from "react-native";
 
 interface SearchBarProps {
     style?: StyleProp<ViewStyle>;
+    value: string;
+    onChangeText: (text: string) => void;
 }
 
 export function SearchBar ({ style }: SearchBarProps){

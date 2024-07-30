@@ -22,6 +22,7 @@ export const speakers: Speaker[] =[
         title: 'Minicurso I',
         local: 'Auditório do CT, Bloco 1',
         instituition: 'UFCG',
+        photoUri: require('./assets/Walman UFCG.png'),
 
         sessions: [{
             title: 'Fundamentos dos processos de fabricação de produtos metálicos',
@@ -52,6 +53,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática I',
         local: 'Auditório do CT',
         instituition: 'UFSCar',
+        photoUri: require('./assets/Bolfarini.png'),
 
         sessions: [{
             title: 'Análise e prevenção de falhas em peças fundidas',
@@ -66,6 +68,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática I',
         local: 'Auditório do CT',
         instituition: 'UFRN/Rede PDIMat',
+        photoUri: require('./assets/SergioBarra.png'),
 
         sessions: [{
             title: 'Fundamento das técnicas de mitigação do processo de corrosão',
@@ -108,6 +111,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática I',
         local: 'Auditório do CT',
         instituition: 'UFSCar',
+        photoUri: require('./assets/Spinelli.png'),
 
         sessions: [{
             title: 'Interpretando microestruturas e propriedades em superfícies de ligas de Al tratadas a laser',
@@ -130,6 +134,7 @@ export const speakers: Speaker[] =[
         title: 'Palestra de abertura',
         local: 'Auditório do CT',
         instituition: 'PUCPR/CONFEA',
+        photoUri:require('./assets/Prof. Joel Krüger - PUCPR.jpeg.png'),
 
         sessions: [{
             title: 'Perspectivas de parcerias entre o Sistema CONFEA/CREA/MUTUA e o setor de energias e as demandas de engenharia',
@@ -175,6 +180,7 @@ export const speakers: Speaker[] =[
         title: 'Minicurso II',
         local: 'Auditório do CT, Bloco 1',
         instituition: 'MAGMA',
+        photoUri: require('./assets/Reinaldo_Joern.png'),
 
         sessions: [{
             title: 'Custos e Produtividade em Fundição: Aplicação das tecnologias como vantagem competitiva',
@@ -191,6 +197,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática II',
         local: 'Auditório do CT',
         instituition: 'Vallourec',
+        photoUri: require('./assets/Vicente Trindade.png'),
 
         sessions: [{
             title: 'Desenvolvimento de aços para o transporte de H: Estado da Arte',
@@ -205,6 +212,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática II',
         local: 'Auditório do CT',
         instituition: 'Aperam',
+        photoUri: require('./assets/Tiago Lima.png'),
 
         sessions: [{
             title: 'Aplicações e diferenciais dos aços inoxidáveis nos setores de energias renováveis e não renováveis',
@@ -235,6 +243,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática II',
         local: 'Auditório do CT',
         instituition: 'ArcelorMittal',
+        photoUri: require('./assets/José Francisco.png'),
 
         sessions: [{
             title: 'Desenvolvimento e aplicabilidades dos revestimentos metálicos para o setor de energias',
@@ -252,6 +261,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática III',
         local: 'Auditório do CT',
         instituition: 'UTFem/UTFPR',
+        photoUri: require('./assets/Rosângela de Fátima Stankowitz.png'),
 
         sessions: [{
             title: 'A quebra dos viéses inconsistentes',
@@ -266,6 +276,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática III',
         local: 'Auditório do CT',
         instituition: 'PEMM/COPPE',
+        photoUri: require('./assets/Gabriela Ribeiro Pereira.png'),
 
         sessions: [{
             title: 'Programas de incentivo a meninas e mulheres nas Ciências no Rio de Janeiro',
@@ -280,6 +291,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática III',
         local: 'Auditório do CT',
         instituition: 'Projeto Botina & Salto',
+        photoUri: require('./assets/AnaKeliMartins.png'),
 
         sessions: [{
             title: 'Os desafios de usar Botina & Salto',
@@ -326,6 +338,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática IV',
         local: 'Auditório do CT',
         instituition: 'CTDUT',
+        photoUri: require('./assets/Byron_CTDUT.jpeg.png'),
 
         sessions: [{
             title: 'Inspeção interna de dutos usando PIGs inteligentes',
@@ -340,6 +353,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática IV',
         local: 'Auditório do CT',
         instituition: 'COPPE/UFRJ',
+        photoUri: require('./assets/Gabriela Ribeiro Pereira.png'),
 
         sessions: [{
             title: 'A área dos END e a cooperação com o setor industrial',
@@ -354,6 +368,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática IV',
         local: 'Auditório do CT',
         instituition: 'IFBaiano',
+        photoUri: require('./assets/Camila Pena.png'),
 
         sessions: [{
             title: 'Inspeção Baseada em Risco P&G: Cenário e perspectivas',
@@ -368,6 +383,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática IV',
         local: 'Auditório do CT',
         instituition: 'COPPE/UFRJ',
+        photoUri: require('./assets/Heloisa Furtado - COPPE.png'),
 
         sessions: [{
             title: 'Inspeção e manutenção de aerogeradores',

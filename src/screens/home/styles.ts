@@ -18,3 +18,9 @@ export const GreyBar = styled.View`
 export const Body = styled.ScrollView`
     flex: 1;
 `
+export const Palestra = styled.Text`
+    font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
+    font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
+    color: ${({ theme }) => theme.COLORS.BLUE_04};
+    margin: 0 16px 16px 16px;
+`
