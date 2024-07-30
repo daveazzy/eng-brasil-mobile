@@ -5,17 +5,16 @@ export const Card = styled.View`
   margin: 0 16px 16px 16px;
   padding: 16px 0;
   border-radius: 10px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid ${({ theme }) => theme.COLORS.GREY_10};
 `;
 
 export const Header = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 16px;
+  padding-bottom: 14px;
   border-bottom-width: 1px;
   border-color: ${({ theme })=> theme.COLORS.GREY_10};
-  /* background-color: red; */
 `;
 
 export const HeaderText = styled.View`
@@ -28,13 +27,15 @@ export const HeaderText = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-size: 14px;
-  color: #999;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.MEDIUM};
+  font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
+  color: ${({ theme }) => theme.COLORS.GREY_05};
 `;
 
 export const DateTime = styled.Text`
-  font-size: 14px;
-  color: #999;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.MEDIUM};
+  font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
+  color: ${({ theme }) => theme.COLORS.GREY_05};
   margin-left: 10px;
 `;
 
@@ -45,8 +46,8 @@ export const Body = styled.View`
 `;
 
 export const SpeakerImage = styled.Image`
-  width: 80px;
-  height: 80px;
+  width: 72px;
+  height: 72px;
   border-radius: 16px;
   margin-right: 10px;
   margin-left: 16px;
@@ -58,17 +59,21 @@ export const Info = styled.View`
 `;
 
 export const SessionTitle = styled.Text`
-  font-size: 16px;
-  font-weight: bold;
-  color: #1b388d;
+  font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+  color: ${({ theme }) => theme.COLORS.BLUE_01};
+  margin-bottom: 4px;
 `;
 
 export const SpeakerName = styled.Text`
-  font-size: 14px;
-  color: #666;
+  font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
+  color: ${({ theme }) => theme.COLORS.GREY_03};
+  font-family: ${({ theme }) => theme.FONT_FAMILY.MEDIUM};
+  margin-bottom: 2px;
 `;
 
 export const Location = styled.Text`
-  font-size: 12px;
-  color: #999;
+  font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
+  color: ${({ theme }) => theme.COLORS.GREY_03};
+  font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
 `;

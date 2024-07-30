@@ -11,7 +11,7 @@ interface SearchBarProps {
     onChangeText: (text: string) => void;
 }
 
-export function SearchBar ({ style }: SearchBarProps){
+export const SearchBar : React.FC <SearchBarProps> = ({style, value, onChangeText, ...rest}) =>{
 
     const { COLORS, FONT_FAMILY } = useTheme();
 
@@ -22,6 +22,9 @@ export function SearchBar ({ style }: SearchBarProps){
                 <Input 
                     placeholder='Pesquisar evento'
                     placeholderTextColor={COLORS.GREY_ACTIVE}
+                    value={value}
+                    onChangeText={onChangeText}
+                    {...rest}
                     />
             </Bar>
     )

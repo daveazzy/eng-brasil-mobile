@@ -4,6 +4,7 @@ export default {
 
         BLUE: "#0961C9", 
         BLUE_INACTIVE: '#CBEBFC',
+        BLUE_01:'#011B60',
         BLUE_04:'#064BAC',
 
         GREY_INACTIVE: '#F0F2FA', 
@@ -11,6 +12,7 @@ export default {
         GREY_BORDER: '#E0EAF2',
         GREY_INFO: '#3D3E44',
         GREY_TB: '#5A5C66', 
+        GREY_03: '#3D3E44',
         GREY_05: '#70727F',
         GREY_10: '#DDDFEB',
 

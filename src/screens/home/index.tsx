@@ -1,40 +1,54 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect, useCallback } from "react";
 import { Body, Container, GreyBar, Header, Palestra } from "./styles";
 import { SearchBar } from "../../components/searchBar";
 import { Carousel } from "../../components/homeCarousel";
 import SpeakerCard from "../../components/boxSpeakers";
-import { speakers } from "../../@event/event";
+import { speakers, Speaker } from "../../@event/event";
+
+function regexText(text: string): string {
+    return text.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
+function getUniqueTitle(speakers: Speaker[]): string[] {
+    const titles = speakers.map(speaker => speaker.title);
+    return ["Todos", ...new Set(titles)];
+}
 
 export function Home() {
-    const [searchText, setSearchText] = useState('');
-    const [filteredSpeakers, setFilteredSpeakers] = useState(speakers);
+    const [searchText, setSearchText] = useState<string>('');
+    const [filteredSpeakers, setFilteredSpeakers] = useState<Speaker[]>(speakers);
+    const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
 
-    const carouselData = [
-        { id: '1', title: 'Todos' },
-        { id: '2', title: 'Abertura' },
-        { id: '3', title: 'Evento cultural' },
-        { id: '4', title: 'Minicurso I' },
-        { id: '5', title: 'Minicurso II' },
-        { id: '6', title: 'Minicurso III' },
-        { id: '7', title: 'Palestra temática I' },
-        { id: '8', title: 'Palestra temática II' },
-        { id: '9', title: 'Palestra temática III' },
-        { id: '10', title: 'Palestra temática IV' },
-    ];
+    const carouselData = getUniqueTitle(speakers).map((title, index) => ({
+        id: (index + 1).toString(),
+        title: title
+    }));
+
+    const filterSpeakers = useCallback(() => {
+        let filtered = speakers;
+
+        if (selectedCategory !== 'Todos') {
+            filtered = filtered.filter(speaker => speaker.title === selectedCategory);
+        }
+
+        if (searchText !== '') {
+            const regexSearchText = regexText(searchText);
+            filtered = filtered.filter(speaker =>
+                speaker.sessions.some(session =>
+                    regexText(session.title).includes(regexSearchText))
+            );
+        }
+
+        setFilteredSpeakers(filtered);
+    }, [searchText, selectedCategory]);
 
     useEffect(() => {
-        if (searchText === '') {
-            setFilteredSpeakers(speakers);
-        } else {
-            const filtered = speakers.filter(speaker =>
-                speaker.sessions.some(session =>
-                    session.title.toLowerCase().includes(searchText.toLowerCase())
-                )
-            );
-            setFilteredSpeakers(filtered);
-        }
-    }, [searchText]);
+        filterSpeakers();
+    }, [filterSpeakers]);
+
+    const handleCarouselPress = useCallback((item: { id: string; title: string }) => {
+        setSelectedCategory(item.title);
+    }, []);
 
     return (
         <Container>
@@ -48,11 +62,11 @@ export function Home() {
             </Header>
             <Body showsVerticalScrollIndicator={false}>
 
-                <Carousel data={carouselData} />
+                <Carousel data={carouselData} onItemPress={handleCarouselPress} />
 
                 <Palestra>PALESTRAS</Palestra>
 
-                {filteredSpeakers.map((speaker) => (
+                {filteredSpeakers.map(speaker => (
                     <SpeakerCard key={speaker.id} speaker={speaker} />
                 ))}
 

@@ -1,4 +1,4 @@
-interface Speaker {
+export interface Speaker {
     id: number;
     name: string;
     title: string;
@@ -37,6 +37,7 @@ export const speakers: Speaker[] =[
         title: 'Minicurso I',
         local: 'Auditório do CT, Bloco 1',
         instituition: 'UERJ',
+        photoUri:require('./assets/Tetyana.png'),
 
         sessions: [{
             title: 'Tensões reiduais: Fundamentos e técnicas de medição',
@@ -83,6 +84,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática I',
         local: 'Auditório do CT',
         instituition: 'Trabspetro/SENAI Cimatec',
+        photoUri:require('./assets/CarlosAugustoSouza.png'),
 
         sessions: [{
             title: 'Segurança operacional e meio ambiente na operação de dutos para o transporte de hidrogênio verde',
@@ -97,7 +99,7 @@ export const speakers: Speaker[] =[
         title: 'Sessão temática I',
         local: 'Auditório do CT',
         instituition: 'INMETRO/SBM',
-
+        photoUri:require('./assets/RodrigoCostaFelix.png'),
         sessions: [{
             title: 'A importância da metrologia como ferramenta de inovação e competitividade',
             date: '06/11',
@@ -149,6 +151,7 @@ export const speakers: Speaker[] =[
         title: 'Palestra de abertura',
         local: 'Auditório do CT',
         instituition: 'Vita Digital/UEPA',
+        photoUri:require('./assets/AntonioBatista.png'),
 
         sessions: [{
             title: 'O cenário do setor de energias e as demandas de engenharia',
@@ -166,9 +169,10 @@ export const speakers: Speaker[] =[
         title: 'Minicurso II',
         local: 'Auditório do CT, Bloco 1',
         instituition: 'CEFETMG/ABINOX',
+        photoUri:require('./assets/KarinaBarcelos.png'),
 
         sessions: [{
-            title: 'Conhecendo e especificando os a~ços inoxidáveis',
+            title: 'Conhecendo e especificando os aços inoxidáveis',
             date: '07/11',
             startTime: '08:00',
             endTime: '10:00'
@@ -324,6 +328,7 @@ export const speakers: Speaker[] =[
         title: 'Minicurso 3',
         local: 'Auditório do CT, Bloco 1',
         instituition: 'Unisanta/Unaerp',
+        photoUri:require('./assets/Willy Ank de Morais.png'),
 
         sessions: [{
             title: 'Ensaios Mecânicos: Particularidades na execução e representatividade',

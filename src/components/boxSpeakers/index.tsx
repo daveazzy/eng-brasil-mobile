@@ -33,7 +33,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({ speaker }) => {
           <Title>{speaker.title.toUpperCase()}</Title>
           <DateTime>{`${session.date} | ${session.startTime}`}</DateTime>
         </HeaderText>
-        <FontAwesome name="heart-o" size={20} color="#999" style={{marginRight: 16}}/>
+        <FontAwesome name="heart-o" size={20} color="#70727F" style={{marginRight: 16}}/>
       </Header>
       <Body>
         <SpeakerImage source={speaker.photoUri} />
