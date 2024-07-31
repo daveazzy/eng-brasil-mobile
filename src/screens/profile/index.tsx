@@ -1,11 +1,10 @@
 import React from "react";
 
-import { Container, Text } from "./styles";
+import { Container, } from "./styles";
 
 export function Profile(){
     return(
         <Container>
-            <Text>Home</Text>
         </Container>
     )
 }

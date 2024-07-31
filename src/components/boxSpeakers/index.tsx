@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesome } from '@expo/vector-icons';
 import { Body, Card, DateTime, Header, HeaderText, Info, SessionTitle, SpeakerImage, SpeakerName, Title,  Location} from './styles';
+import { useFavorites } from '../../contexts/favoritesContext';
 
 
 interface Session {
@@ -26,6 +27,12 @@ interface SpeakerCardProps {
 
 const SpeakerCard: React.FC<SpeakerCardProps> = ({ speaker }) => {
   const session = speaker.sessions[0];
+  
+  const { favorites, toggleFavorite} = useFavorites();
+  const isFavorite = favorites.some(fav => fav.id === speaker.id);
+
+
+
   return (
     <Card>
       <Header>
@@ -33,7 +40,13 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({ speaker }) => {
           <Title>{speaker.title.toUpperCase()}</Title>
           <DateTime>{`${session.date} | ${session.startTime}`}</DateTime>
         </HeaderText>
-        <FontAwesome name="heart-o" size={20} color="#70727F" style={{marginRight: 16}}/>
+        <FontAwesome 
+        name= {isFavorite ? 'heart' : 'heart-o'}
+        size={20} 
+        color= {isFavorite ? '#F75A68' : '#70727F'}
+        style={{marginRight: 16}}
+        onPress={() => toggleFavorite(speaker)}
+        />
       </Header>
       <Body>
         <SpeakerImage source={speaker.photoUri} />

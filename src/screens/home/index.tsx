@@ -25,7 +25,7 @@ export function Home() {
     }));
 
     const filterSpeakers = useCallback(() => {
-        let filtered = speakers;
+        var filtered = speakers;
 
         if (selectedCategory !== 'Todos') {
             filtered = filtered.filter(speaker => speaker.title === selectedCategory);

@@ -10,14 +10,17 @@ import { PassRecovery } from './src/screens/passRecovery';
 import { PassRecoveryToken } from './src/screens/passRecovery/indexToken';
 import { PassChange } from './src/screens/passRecovery/PassChange';
 import { Routes } from './src/screens/routes';
+import { FavoritesProvider } from './src/contexts/favoritesContext';
 
 export default function App() {
 
   const [fontsLoaded] = useFonts({DMSans_400Regular, DMSans_500Medium, DMSans_700Bold});
 
   return (
-    <ThemeProvider theme={theme}>
-      {fontsLoaded ? <Routes/> : <ActivityIndicator/>}
-    </ThemeProvider>
+    <FavoritesProvider>
+      <ThemeProvider theme={theme}>
+        {fontsLoaded ? <Routes/> : <ActivityIndicator/>}
+      </ThemeProvider>
+    </FavoritesProvider>
   );
 }
