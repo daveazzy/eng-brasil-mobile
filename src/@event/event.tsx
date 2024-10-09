@@ -11,7 +11,53 @@ export interface Speaker {
         startTime: string;
         endTime: string;
     }[]
-}
+};
+
+export interface Mediadores {
+    id: number,
+    name: string,
+    title: string,
+    instituition: string,
+    local: string,
+    photoUri?: string
+};
+
+export const mediadores: Mediadores[] =[
+    {
+        id: 1,
+        name: 'Willy Ank de Morais',
+        title: 'Mediador',
+        instituition: 'Unisanta/Unaerp',
+        local:'Auditório do CT',
+        photoUri: require('./assets/Willy Ank de Morais.png')
+    },
+    {
+        id: 2,
+        name: 'Nicolau Apoena Castro',
+        title: 'Mediador',
+        instituition: 'UFRN',
+        local:'Auditório do CT',
+        photoUri: require('./assets/NicolauCastro.png')
+    },
+    {
+        id: 3,
+        name: 'Karina Barcelos ',
+        title: 'Mediador',
+        instituition: 'CEFET-MG/Abinox',
+        local:'Auditório do CT',
+        photoUri: require('./assets/KarinaBarcelos.png')
+
+    },
+    {
+        id: 4,
+        name: 'Carlos O. D. Martins',
+        title: 'Mediador',
+        instituition: 'UFS/Abendi',
+        local:'Auditório do CT',
+        photoUri: require('./assets/CarlosMartins.png')
+
+    },
+];
 
 export const speakers: Speaker[] =[
 
