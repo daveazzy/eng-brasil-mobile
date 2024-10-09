@@ -42,10 +42,8 @@ export const Forms = styled.View`
 export const InputBox = styled.View`
 `
 export const ButtonBox = styled.View`
-`
-export const Scroll = styled.ScrollView`
-    flex-grow: 1;
-`
+`;
+
 export const BackgroundImg = styled(ImageBackground)`
     flex-grow: 1;
     justify-content: center;

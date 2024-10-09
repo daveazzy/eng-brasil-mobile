@@ -9,7 +9,7 @@ export default {
 
         GREY_INACTIVE: '#F0F2FA', 
         GREY_ACTIVE: '#B0B2BF',
-        GREY_BORDER: '#E0EAF2',
+        GREY_BORDER: '#E9EAF2',
         GREY_INFO: '#3D3E44',
         GREY_TB: '#5A5C66', 
         GREY_03: '#3D3E44',
