@@ -19,7 +19,7 @@ export default function App() {
   return (
     <FavoritesProvider>
       <ThemeProvider theme={theme}>
-        {fontsLoaded ? <SignIn/> : <ActivityIndicator/>}
+        {fontsLoaded ? <Register/> : <ActivityIndicator/>}
       </ThemeProvider>
     </FavoritesProvider>
   );
