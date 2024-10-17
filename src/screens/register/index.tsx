@@ -1,108 +1,107 @@
+import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { KeyboardAvoidingView, ScrollView, Platform, Alert } from "react-native";
 import { ButtonsBox, Container, Forms, Title } from "./styles";
-import React, { useState } from "react";
 import { Input } from "../../components/inputs/inputs";
 import { Button } from "../../components/btn/btn";
 import { Header } from "../../components/header";
-import { supabase } from "../../utils/supabaseClient/supabaseClient"; // Certifique-se de importar seu client do Supabase
+import api from "../../services/api"; 
+import { useNavigation } from "@react-navigation/native";
+import { AuthNavigatorRoutesProps } from "../routes/auth.routes";
 
 export function Register() {
-  // Estados para armazenar os dados dos inputs
+  const navigation = useNavigation<AuthNavigatorRoutesProps>();
+  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordRepeat, setPasswordRepeat] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
-  // Função para cadastrar o usuário na tabela 'participant'
+  function handleGoBack() {
+    navigation.goBack();
+  }
+
   async function handleSignUp() {
-    if (password !== passwordRepeat) {
-      Alert.alert("Erro", "As senhas não coincidem!");
+    if (password !== confirmPassword) {
+      Alert.alert("Erro", "As senhas não coincidem.");
       return;
     }
 
     try {
-      // Faz a requisição POST para cadastrar o usuário na tabela 'participant'
-      const { data, error } = await supabase
-        .from("Participant")
-        .insert([{ name, email, password }]);
+      const id = "9"
+      const qrCodeToken = "678"
+      const password_hash = password
 
-        console.log(name, email, password)
+      const response = await api.post("/participants", {
+        id,
+        name,
+        email,
+        password_hash,
+        qrCodeToken
+      });
 
-      if (error) {
-        console.error("Erro ao cadastrar:", error.message);
-        Alert.alert("Erro", error.message);
-      } else {
-        Alert.alert("Sucesso", "Usuário cadastrado com sucesso!");
-      }
+      Alert.alert("Sucesso", "Usuário registrado com sucesso!");
+      navigation.navigate("signIn");
+
     } catch (error) {
-      console.error("Erro ao cadastrar:", error);
-      Alert.alert("Erro", "Erro ao conectar com o servidor");
+      console.error(error);
+      Alert.alert("Erro", "Falha ao registrar. Tente novamente.");
     }
   }
 
   return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}
-      behavior={Platform.OS === "ios" ? "padding" : undefined}
-      keyboardVerticalOffset={100}
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      keyboardVerticalOffset={0}
     >
       <StatusBar backgroundColor="transparent" translucent style="light" />
-
-      <ScrollView
-        contentContainerStyle={{ flexGrow: 1 }}
-        keyboardShouldPersistTaps="handled"
-      >
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }} keyboardShouldPersistTaps="handled">
         <Container>
           <Header title="Cadastro" />
-
           <Forms>
             <Title style={{ marginTop: 24 }}>Nome</Title>
             <Input
               placeholder="Seu nome"
-              style={{ marginBottom: 24, marginHorizontal: 16 }}
               value={name}
-              onChangeText={setName} // Armazena o nome
+              onChangeText={setName}
+              style={{ marginBottom: 24, marginHorizontal: 16 }}
             />
-
             <Title>Email</Title>
             <Input
               placeholder="example@example.com"
-              style={{ marginBottom: 24, marginHorizontal: 16 }}
               value={email}
-              onChangeText={setEmail} // Armazena o email
+              onChangeText={setEmail}
+              style={{ marginBottom: 24, marginHorizontal: 16 }}
             />
-
             <Title>Senha</Title>
             <Input
               placeholder="********"
-              style={{ marginBottom: 24, marginHorizontal: 16 }}
               secureTextEntry
               value={password}
-              onChangeText={setPassword} // Armazena a senha
+              onChangeText={setPassword}
+              style={{ marginBottom: 24, marginHorizontal: 16 }}
             />
-
             <Title>Repetir senha</Title>
             <Input
               placeholder="********"
-              style={{ marginBottom: 24, marginHorizontal: 16 }}
               secureTextEntry
-              value={passwordRepeat}
-              onChangeText={setPasswordRepeat} // Armazena a repetição da senha
+              value={confirmPassword}
+              onChangeText={setConfirmPassword}
+              style={{ marginBottom: 24, marginHorizontal: 16 }}
             />
           </Forms>
-
           <ButtonsBox>
             <Button
               title="Finalizar cadastro"
               style={{ marginBottom: 16, marginHorizontal: 16 }}
-              onPress={handleSignUp} // Função que chama o Supabase para cadastro
+              onPress={handleSignUp}
             />
-
             <Button
               title="Voltar"
               type="SECONDARY"
               style={{ marginBottom: 32, marginHorizontal: 16 }}
+              onPress={handleGoBack}
             />
           </ButtonsBox>
         </Container>

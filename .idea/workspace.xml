@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff4a1144-f2a2-4575-a656-012a5dd5ec3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/eas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/btn/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/btn/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/register/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/register/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/routes/auth.routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/routes/auth.routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/signIn/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/signIn/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/signIn/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/signIn/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
