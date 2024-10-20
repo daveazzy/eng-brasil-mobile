@@ -5,7 +5,7 @@ import { ButtonsBox, Container, Forms, Title } from "./styles";
 import { Input } from "../../components/inputs/inputs";
 import { Button } from "../../components/btn/btn";
 import { Header } from "../../components/header";
-import api from "../../services/api"; 
+import { api } from "../../services/api"; 
 import { useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRoutesProps } from "../routes/auth.routes";
 
@@ -28,16 +28,10 @@ export function Register() {
     }
 
     try {
-      const id = "9"
-      const qrCodeToken = "678"
-      const password_hash = password
-
       const response = await api.post("/participants", {
-        id,
         name,
         email,
-        password_hash,
-        qrCodeToken
+        password
       });
 
       Alert.alert("Sucesso", "Usuário registrado com sucesso!");
