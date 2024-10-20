@@ -4,6 +4,7 @@ export default {
 
         BLUE: "#0961C9", 
         BLUE_INACTIVE: '#CBEBFC',
+        BLUE_BRIGTHEN:"#F0F6FF",
         BLUE_01:'#011B60',
         BLUE_04:'#064BAC',
 

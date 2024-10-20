@@ -4,7 +4,7 @@ import { useTheme } from 'styled-components';
 
 import { Home} from '../home';
 import { Favorites } from '../favorites';
-import Profile from '../profile';
+import { Profile } from '../profile';
 
 import HomeSvg from '../../assets/bottomTab/house-simple.svg';
 import FavSvg from '../../assets/bottomTab/heart-straight.svg';

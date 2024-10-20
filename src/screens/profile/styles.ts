@@ -1,68 +1,54 @@
+import { SafeAreaView } from "react-native-safe-area-context";
 import styled from "styled-components/native";
 
-export const Container = styled.View`
-  flex: 1;
-  padding: 20px;
-  background-color: #f5f5f5;
+
+export const Container = styled(SafeAreaView)`
+    flex: 1;
+    background-color: ${({ theme }) => theme.COLORS.BLUE_BRIGTHEN};
 `;
 
-export const Header = styled.View`
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const BackText = styled.Text`
-  color: #1b388d;
-`;
-
-export const Title = styled.Text`
-  font-size: 24px;
-  font-weight: bold;
-  color: #1b388d;
-`;
-
-export const ProfilePictureContainer = styled.View`
-  align-items: center;
-  margin-top: 20px;
-`;
-
-export const ProfilePicture = styled.Image`
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-`;
-
-export const EditPictureButton = styled.TouchableOpacity`
-  margin-top: 10px;
-`;
-
-export const EditPictureText = styled.Text`
-  color: #1b388d;
-`;
-
-export const InputLabel = styled.Text`
-  color: #1b388d;
-  margin-top: 20px;
-`;
-
-export const Input = styled.TextInput`
-  background-color: #f0f6ff;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-top: 5px;
-`;
-
-export const SaveButton = styled.TouchableOpacity`
-  background-color: #1b388d;
-  padding: 15px;
-  border-radius: 5px;
-  align-items: center;
-  margin-top: 20px;
-`;
-
-export const SaveButtonText = styled.Text`
-  color: white;
-  font-size: 16px;
-`;
+export const ProfileContainer = styled.View`
+  flex: 0.3;
+  `
+export const Body = styled.View`
+  flex: 0.7;
+  padding: 16px;
+  background-color: ${({ theme }) => theme.COLORS.WHITE};
+`
+export const TopButton = styled.TouchableOpacity`
+    width: 100%;
+    height: 56px;
+    background-color: ${({ theme }) => theme.COLORS.BLUE_BRIGTHEN};
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-width: 1px;
+    border-color: ${({ theme }) => theme.COLORS.BLUE_INACTIVE};
+    flex-direction: row;
+    align-items: center;
+    padding: 0 16px;
+    gap: 8px;
+`
+export const MiddleButton = styled.TouchableOpacity`
+    width: 100%;
+    height: 56px;
+    background-color: ${({ theme }) => theme.COLORS.BLUE_BRIGTHEN};
+    border-bottom-width: 1px;
+    border-color: ${({ theme }) => theme.COLORS.BLUE_INACTIVE};
+    flex-direction: row;
+    align-items: center;
+    padding: 0 16px;
+    gap: 8px;
+`
+export const BottomButton = styled.TouchableOpacity`
+    width: 100%;
+    height: 56px;
+    background-color: ${({ theme }) => theme.COLORS.BLUE_BRIGTHEN};
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-width: 1px;
+    border-color: ${({ theme }) => theme.COLORS.BLUE_INACTIVE};
+    flex-direction: row;
+    align-items: center;
+    padding: 0 16px;
+    gap: 8px;
+`
