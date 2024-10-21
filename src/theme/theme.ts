@@ -17,6 +17,8 @@ export default {
         GREY_05: '#70727F',
         GREY_10: '#DDDFEB',
 
+        RED: '#F75A68',
+
     },
     FONT_FAMILY: {
         REGULAR: 'DMSans_400Regular',
