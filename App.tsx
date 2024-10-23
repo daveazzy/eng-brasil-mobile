@@ -11,16 +11,19 @@ import { PassRecoveryToken } from './src/screens/passRecovery/indexToken';
 import { PassChange } from './src/screens/passRecovery/PassChange';
 import { Routes } from './src/screens/routes';
 import { FavoritesProvider } from './src/contexts/favoritesContext';
+import { AuthContextProvider } from './src/contexts/AuthContext';
 
 export default function App() {
 
   const [fontsLoaded] = useFonts({DMSans_400Regular, DMSans_500Medium, DMSans_700Bold});
 
   return (
+    <AuthContextProvider>
     <FavoritesProvider>
       <ThemeProvider theme={theme}>
         {fontsLoaded ? <Routes/> : <ActivityIndicator/>}
       </ThemeProvider>
     </FavoritesProvider>
+    </AuthContextProvider>
   );
 }

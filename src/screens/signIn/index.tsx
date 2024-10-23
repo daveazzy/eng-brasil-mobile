@@ -47,11 +47,13 @@ export function SignIn() {
       await signIn(email, password);
     } catch (error) {
       const isAppError = error instanceof AppError;
-      const title = isAppError ? error.message : "Não foi possível realizar o login. Tente novamente mais tarde.";
+      const title = isAppError
+        ? error.message
+        : "Não foi possível realizar o login. Tente novamente mais tarde.";
       alert(title);
-      setIsLoading(false);
     }
   }
+  
 
   function handleNewAccount() {
     navigation.navigate("register");

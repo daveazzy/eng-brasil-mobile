@@ -1,6 +1,5 @@
 import React from "react";
-import { Text } from "react-native";
-import { Academic, Arrow, Body, BottomButton, ButtonsText, Container, IconArrow, IconConfig, IconLock, Info, Logout, LogoutButton, MiddleButton, Name, Pencil, Photo, ProfileContainer, QRCodeContainer, TitleSession, TopButton } from "./styles";
+import { Academic, Body, BottomButton, ButtonsText, Container, Info, LogoutButton, MiddleButton, Name, Photo, ProfileContainer, QRCodeContainer, TitleSession, TopButton } from "./styles";
 import QRCode from "react-native-qrcode-svg"
 
 export function Profile () {
@@ -31,33 +30,20 @@ export function Profile () {
 
         <TitleSession>Informações de perfil e configurações</TitleSession>
         <TopButton>
-          <Pencil/>
           <ButtonsText>Editar perfil</ButtonsText>
-          <Arrow>
-            <IconArrow/>
-          </Arrow>
         </TopButton>
 
         <MiddleButton>
-        <IconLock/>
           <ButtonsText>Alterar senha</ButtonsText>
-          <Arrow>
-            <IconArrow/>
-          </Arrow>
         </MiddleButton>
 
         <BottomButton>
-          <IconConfig/>
           <ButtonsText>Outras configurações</ButtonsText>
-          <Arrow>
-            <IconArrow/>
-          </Arrow>
         </BottomButton>
 
         <TitleSession>Sair</TitleSession>
 
         <LogoutButton>
-          <Logout/>
           <ButtonsText>Sair</ButtonsText>
         </LogoutButton>
       </Body>

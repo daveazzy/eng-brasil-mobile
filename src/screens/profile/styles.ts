@@ -113,37 +113,37 @@ export const ButtonsText = styled.Text`
 
 //icons
 
-import {Gear, CaretRight, PencilSimple, Lock, SignOut} from 'phosphor-react-native'
+// import {Gear, CaretRight, PencilSimple, Lock, SignOut} from 'phosphor-react-native'
 
-export const Arrow = styled.View`
-  flex: 1;
-  align-items: flex-end;
-`
-export const IconArrow = styled(CaretRight).attrs(({ theme }) => ({
-  size: 32,
-  color: theme.COLORS.BLUE
-}))`
-`;
+// export const Arrow = styled.View`
+//   flex: 1;
+//   align-items: flex-end;
+// `
+// export const IconArrow = styled(CaretRight).attrs(({ theme }) => ({
+//   size: 32,
+//   color: theme.COLORS.BLUE
+// }))`
+// `;
 
-export const IconConfig = styled(Gear).attrs(({ theme }) => ({
-  size: 32,
-  color: theme.COLORS.BLUE
-}))`
-`
+// export const IconConfig = styled(Gear).attrs(({ theme }) => ({
+//   size: 32,
+//   color: theme.COLORS.BLUE
+// }))`
+// `
 
-export const Pencil = styled(PencilSimple).attrs(({ theme }) => ({
-  size: 32,
-  color: theme.COLORS.BLUE
-}))`
-`
+// export const Pencil = styled(PencilSimple).attrs(({ theme }) => ({
+//   size: 32,
+//   color: theme.COLORS.BLUE
+// }))`
+// `
 
-export const IconLock = styled(Lock).attrs(({ theme }) => ({
-  size: 32,
-  color: theme.COLORS.BLUE
-}))`
-`
-export const Logout = styled(SignOut).attrs(({ theme }) => ({
-  size: 32,
-  color: theme.COLORS.BLUE
-}))`
-`;
+// export const IconLock = styled(Lock).attrs(({ theme }) => ({
+//   size: 32,
+//   color: theme.COLORS.BLUE
+// }))`
+// `
+// export const Logout = styled(SignOut).attrs(({ theme }) => ({
+//   size: 32,
+//   color: theme.COLORS.BLUE
+// }))`
+// `;
