@@ -51,6 +51,8 @@ export function SignIn() {
         ? error.message
         : "Não foi possível realizar o login. Tente novamente mais tarde.";
       alert(title);
+
+      setIsLoading(false)
     }
   }
   

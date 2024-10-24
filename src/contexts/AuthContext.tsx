@@ -45,9 +45,9 @@ export function AuthContextProvider ({ children }: AuthContextProviderProps) {
             const { data } = await api.post('/participantSessions', {email, password});
 
 
-            if(data.user && data.token) {
-                await storageUserAndTokenSave(data.user, data.token);
-                UserAndTokenUpdate(data.user, data.token);
+            if(data.participant && data.token) {
+                await storageUserAndTokenSave(data.participant, data.token);
+                UserAndTokenUpdate(data.participant, data.token);
             }
         } catch (error) {
             throw error;
@@ -71,7 +71,7 @@ export function AuthContextProvider ({ children }: AuthContextProviderProps) {
 
     async function loadUserData(){
         try{
-            setIsLoadingUserStorageData(true);
+        setIsLoadingUserStorageData(true);
         const userLogged = await storageUserGet();
         const token = await storageAuthTokenGet();
 

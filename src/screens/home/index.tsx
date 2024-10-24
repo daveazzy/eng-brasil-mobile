@@ -4,6 +4,7 @@ import { SearchBar } from "../../components/searchBar";
 import { Carousel } from "../../components/homeCarousel";
 import SpeakerCard from "../../components/boxSpeakers";
 import { speakers, Speaker } from "../../@event/event";
+import { StatusBar } from "react-native";
 
 function regexText(text: string): string {
     return text.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -52,6 +53,12 @@ export function Home() {
 
     return (
         <Container>
+                <StatusBar 
+                backgroundColor="transparent" 
+                translucent 
+                barStyle={"dark-content"}
+                
+                />
             <Header>
                 <SearchBar
                     value={searchText}

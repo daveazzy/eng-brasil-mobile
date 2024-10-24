@@ -5,6 +5,7 @@ import { Carousel } from "../../components/homeCarousel";
 import SpeakerCard from "../../components/boxSpeakers";
 import { Speaker } from "../../@event/event";
 import { useFavorites } from "../../contexts/favoritesContext";
+import { StatusBar } from "react-native";
 
 function regexText(text: string): string {
     return text.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -56,6 +57,12 @@ export function Favorites() {
 
     return (
         <Container>
+            <StatusBar 
+                backgroundColor="transparent" 
+                translucent 
+                barStyle={"dark-content"}
+                
+            />
             <Header>
                 <SearchBar
                     value={searchText}

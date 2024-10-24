@@ -1,14 +1,24 @@
 import React from "react";
 import { Academic, Body, BottomButton, ButtonsText, Container, Info, LogoutButton, MiddleButton, Name, Photo, ProfileContainer, QRCodeContainer, TitleSession, TopButton } from "./styles";
 import QRCode from "react-native-qrcode-svg"
+import { useAuth } from "../../hooks/UseAuth";
+import { StatusBar } from "react-native";
 
 export function Profile () {
 
   const qrCodeToken = '123456789'
 
+  const {user, signOut} = useAuth();
+
 
   return(
     <Container>
+      <StatusBar 
+          backgroundColor="transparent" 
+          translucent 
+          barStyle={"dark-content"}
+                
+      />
       <ProfileContainer>
         <Photo>
         </Photo>
@@ -43,7 +53,9 @@ export function Profile () {
 
         <TitleSession>Sair</TitleSession>
 
-        <LogoutButton>
+        <LogoutButton
+          onPress={signOut}
+        >
           <ButtonsText>Sair</ButtonsText>
         </LogoutButton>
       </Body>

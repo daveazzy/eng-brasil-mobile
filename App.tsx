@@ -19,11 +19,11 @@ export default function App() {
 
   return (
     <AuthContextProvider>
-    <FavoritesProvider>
-      <ThemeProvider theme={theme}>
-        {fontsLoaded ? <Routes/> : <ActivityIndicator/>}
-      </ThemeProvider>
-    </FavoritesProvider>
+      <FavoritesProvider>
+        <ThemeProvider theme={theme}>
+          {fontsLoaded ? <Routes/> : <ActivityIndicator/>}
+        </ThemeProvider>
+      </FavoritesProvider>
     </AuthContextProvider>
   );
 }
