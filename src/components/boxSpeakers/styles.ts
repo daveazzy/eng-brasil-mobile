@@ -6,6 +6,7 @@ export const Card = styled.View`
   padding: 16px 0;
   border-radius: 10px;
   border: 1px solid ${({ theme }) => theme.COLORS.GREY_10};
+  background-color: ${({ theme }) => theme.COLORS.BLUE_BRIGTHEN}
 `;
 
 export const Header = styled.View`

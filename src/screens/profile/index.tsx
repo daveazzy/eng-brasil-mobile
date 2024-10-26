@@ -78,7 +78,6 @@ export function Profile() {
         </LogoutButton>
       </Body>
 
-      {/* Renderiza o modal do QR Code */}
       <QRCodeModal
         isVisible={isModalVisible}
         onClose={toggleModal}

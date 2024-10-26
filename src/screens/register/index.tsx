@@ -8,6 +8,7 @@ import { Header } from "../../components/header";
 import { api } from "../../services/api"; 
 import { useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRoutesProps } from "../routes/auth.routes";
+import Toast from 'react-native-toast-message';
 
 export function Register() {
   const navigation = useNavigation<AuthNavigatorRoutesProps>();
@@ -34,7 +35,12 @@ export function Register() {
         password
       });
 
-      Alert.alert("Sucesso", "Usuário registrado com sucesso!");
+      Toast.show({
+        type: "success",
+        text1: "Sucesso!",
+        text2:"Usuário cadastrado com sucesso!",
+        position: "bottom"
+      });
       navigation.navigate("signIn");
 
     } catch (error) {
