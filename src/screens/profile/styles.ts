@@ -111,6 +111,13 @@ export const ButtonsText = styled.Text`
   font-size: ${({ theme })=> theme.FONT_SIZE.MD}px;
 `
 
+export const ButtonContent = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
+
 //icons
 
 // import {Gear, CaretRight, PencilSimple, Lock, SignOut} from 'phosphor-react-native'

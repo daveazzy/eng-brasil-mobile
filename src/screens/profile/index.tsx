@@ -1,64 +1,89 @@
-import React from "react";
-import { Academic, Body, BottomButton, ButtonsText, Container, Info, LogoutButton, MiddleButton, Name, Photo, ProfileContainer, QRCodeContainer, TitleSession, TopButton } from "./styles";
-import QRCode from "react-native-qrcode-svg"
+import React, { useState } from "react";
+import { FontAwesome, Feather, MaterialIcons } from '@expo/vector-icons';
+import { 
+  Academic, Body, BottomButton, ButtonsText, Container, Info, 
+  LogoutButton, MiddleButton, Name, Photo, ProfileContainer, 
+  QRCodeContainer, TitleSession, TopButton, ButtonContent
+} from "./styles";
+import { QRCodeModal } from '../../components/qrCode'
 import { useAuth } from "../../hooks/UseAuth";
-import { StatusBar } from "react-native";
+import { StatusBar, TouchableOpacity } from "react-native";
 
-export function Profile () {
+export function Profile() {
+  const { user, signOut } = useAuth();
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const qrCodeToken = '123456789'
+  const qrCodeToken = user.qrCodeToken;
+  const firstName = user.name.split(' ')[0];
 
-  const {user, signOut} = useAuth();
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+  };
 
-
-  return(
+  return (
     <Container>
       <StatusBar 
-          backgroundColor="transparent" 
-          translucent 
-          barStyle={"dark-content"}
-                
+        backgroundColor="transparent" 
+        translucent 
+        barStyle={"dark-content"}
       />
       <ProfileContainer>
-        <Photo>
-        </Photo>
+        <Photo />
         <Info>
-          <Name>Davidson Oiveira</Name>
-          <Academic>Engenheiro de Software</Academic>
+          <Name>{firstName}</Name>
+          <Academic>{user.academicBackground ? user.academicBackground : 'Congressista'}</Academic>
         </Info>
         <QRCodeContainer>
-          <QRCode 
-            value={qrCodeToken} 
-            size={48}
-            color= "#0961C9"
-            />
-
+          <TouchableOpacity onPress={toggleModal}>
+            <MaterialIcons name="qr-code" size={48} color="#0961C9" />
+          </TouchableOpacity>
         </QRCodeContainer>
       </ProfileContainer>
 
       <Body>
-
         <TitleSession>Informações de perfil e configurações</TitleSession>
+
         <TopButton>
-          <ButtonsText>Editar perfil</ButtonsText>
+          <ButtonContent>
+            <FontAwesome name="user" size={20} color="#0961C9" style={{ marginRight: 10 }} />
+            <ButtonsText>Editar perfil</ButtonsText>
+            <Feather name="chevron-right" size={20} color="#0961C9" style={{ marginLeft: 'auto' }} />
+          </ButtonContent>
         </TopButton>
 
         <MiddleButton>
-          <ButtonsText>Alterar senha</ButtonsText>
+          <ButtonContent>
+            <FontAwesome name="lock" size={20} color="#0961C9" style={{ marginRight: 10 }} />
+            <ButtonsText>Alterar senha</ButtonsText>
+            <Feather name="chevron-right" size={20} color="#0961C9" style={{ marginLeft: 'auto' }} />
+          </ButtonContent>
         </MiddleButton>
 
         <BottomButton>
-          <ButtonsText>Outras configurações</ButtonsText>
+          <ButtonContent>
+            <FontAwesome name="cog" size={20} color="#0961C9" style={{ marginRight: 10 }} />
+            <ButtonsText>Outras configurações</ButtonsText>
+            <Feather name="chevron-right" size={20} color="#0961C9" style={{ marginLeft: 'auto' }} />
+          </ButtonContent>
         </BottomButton>
 
         <TitleSession>Sair</TitleSession>
 
-        <LogoutButton
-          onPress={signOut}
-        >
-          <ButtonsText>Sair</ButtonsText>
+        <LogoutButton onPress={signOut}>
+          <ButtonContent>
+            <FontAwesome name="sign-out" size={20} color="#0961C9" style={{ marginRight: 10 }} />
+            <ButtonsText>Sair</ButtonsText>
+            <Feather name="chevron-right" size={20} color="#0961C9" style={{ marginLeft: 'auto' }} />
+          </ButtonContent>
         </LogoutButton>
       </Body>
+
+      {/* Renderiza o modal do QR Code */}
+      <QRCodeModal
+        isVisible={isModalVisible}
+        onClose={toggleModal}
+        qrCodeToken={qrCodeToken}
+      />
     </Container>
-  )
+  );
 }
