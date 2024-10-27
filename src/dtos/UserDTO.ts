@@ -4,4 +4,5 @@ export type UserDTO = {
     email: string;
     qrCodeToken: string;
     academicBackground: string;
+    photoUri: string;
 }

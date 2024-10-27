@@ -14,16 +14,13 @@ export const ProfileContainer = styled.View`
     flex-direction: row;
   `
 
-  export const Photo = styled.View`
-    height: 96px;
-    width: 96px;
-
-    background-color: ${({ theme }) => theme.COLORS.GREY_ACTIVE};
-    border-radius: 54px;
-
-    justify-content: center;
-    align-items: center;
-  `
+export const Photo = styled.Image.attrs(()=> ({
+    resizeMode: 'cover'
+}))`
+    width: 100%;
+    height: 100%;
+    border-radius: 60px;
+`
 export const Info = styled.View`
   flex: 1;
   margin: 0 10px 0 10px;
